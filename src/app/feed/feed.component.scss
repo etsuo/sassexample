@@ -1,0 +1,35 @@
+@import '~sass/libs';
+
+:host {
+  margin: 5px;
+  padding: 5px;
+
+  .add-new-referral {
+    border-radius: $app-radius-standard;
+    background-color: $app-color-bg-light;
+    padding: 25px;
+    padding-bottom: 10px;
+
+    & > div:first-child {
+      flex-direction: row;
+      align-items: center;
+
+      div:first-child {
+        flex-grow: 5;
+        overflow: visible;
+      }
+
+      div:last-child {
+        flex-grow: .25;
+        button {
+          margin: 0 auto;
+        }
+      }
+    }
+
+    & > div:nth-child(2) {
+      flex-direction: row;
+      margin-top: 5px;
+    }
+  }
+}

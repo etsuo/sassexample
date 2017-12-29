@@ -1,0 +1,46 @@
+<mat-card>
+  <mat-card-header>
+
+    <img mat-card-avatar="" src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+         alt="Photo of a Shiba Inu">
+
+    <mat-card-title>{{item.title}}</mat-card-title>
+    <mat-card-subtitle>
+      {{item.name}}
+    </mat-card-subtitle>
+  </mat-card-header>
+  <!--<img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">-->
+  <mat-card-content app-url>
+    <a href="{{item.url}}">
+      <mat-icon>public</mat-icon>
+    </a>
+    <div><a href="{{item.url}}">{{item.url}}</a></div>
+  </mat-card-content>
+  <mat-card-content>
+    <p>
+      {{item.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-icon-button>
+      <mat-icon>thumb_up</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>turned_in_not</mat-icon>
+    </button>
+
+    <div></div>
+
+    <button mat-icon-button app-gray>
+      <mat-icon>share</mat-icon>
+    </button>
+    <button mat-icon-button app-gray>
+      <mat-icon>comment</mat-icon>
+    </button>
+
+    <button mat-icon-button app-gray>
+      <mat-icon>flag</mat-icon>
+    </button>
+
+  </mat-card-actions>
+</mat-card>

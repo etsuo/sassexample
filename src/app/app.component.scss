@@ -1,0 +1,36 @@
+@import '~sass/libs';
+
+:host {
+  .header {
+    flex-direction: row;
+
+    background-color: $app-color-highlight;
+    padding: 10px;
+
+    .logo {
+      border-radius: 50px;
+      background-color: $app-color-text-darkest;
+      color: $app-color-text-lightest;
+      padding: 10px;
+    }
+  }
+
+  .content {
+    flex-direction: row;
+
+    .left {
+      flex-grow: 1;
+      margin-left: 20px;
+    }
+
+    .center {
+      flex-grow: 2;
+      max-width: 800px;
+    }
+
+    .right {
+      flex-grow: 1;
+      margin-right: 20px;
+    }
+  }
+}

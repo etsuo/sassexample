@@ -1,0 +1,38 @@
+@import '~sass/libs';
+
+:host {
+  flex-direction: row;
+
+  &:not(:first-child) {
+    margin-top: 15px;
+  }
+  padding: 5px;
+
+  background-color: $app-color-bg-light;
+  border-radius: $app-radius-standard;
+
+  mat-card {
+    width: 100%;
+
+    mat-card-content[app-url] {
+      display: flex;
+      align-items: center;
+      a {
+        margin-left: 10px;
+      }
+    }
+
+    mat-card-actions {
+      display: flex;
+      flex-direction: row;
+
+      div {
+        flex-grow: 10;
+      }
+
+      & [app-gray] {
+        color: $app-color-text-light;
+      }
+    }
+  }
+}

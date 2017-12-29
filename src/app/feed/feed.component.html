@@ -1,0 +1,29 @@
+<div class="add-new-referral">
+  <div>
+    <div>
+      <input matInput placeholder="hi, input goes here" value="">
+    </div>
+    <div>
+      <button mat-mini-fab>Add</button>
+    </div>
+  </div>
+  <div>
+    <button mat-icon-button>
+      <mat-icon>description</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>add_location</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>timer</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>favorite_border</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>attach_money</mat-icon>
+    </button>
+  </div>
+</div>
+
+<app-feed-list-item *ngFor="let item of items" [item]="item"></app-feed-list-item>

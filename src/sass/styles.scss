@@ -1,0 +1,82 @@
+// https://github.com/necolas/normalize.css
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Work+Sans');
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~normalize.css/normalize.css';
+@import 'libs';
+
+* {
+  // Zero out differences in browsers
+
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $app-color-bg-dark;
+}
+
+div {
+  @if ($debug) {
+    border: $debug-size $debug-type $debug-color-div !important;
+  }
+}
+
+input {
+  padding: 10px;
+}
+
+/**
+ * App Specific Defaults
+ **********************************************************************************************************************/
+%app-defaults {
+  background-color: $app-color-bg-dark;
+  display: flex;
+  flex-direction: column;
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+app-root {
+  @extend %app-defaults;
+  @if ($debug) {
+    border: $debug-size $debug-type $debug-color-app-root !important;
+  }
+}
+
+form {
+  @extend %app-defaults;
+  @if ($debug) {
+    border: $debug-size $debug-type $debug-color-app-form !important;
+  }
+}
+
+.app-component {
+  @extend %app-defaults;
+  // add `host: {'class': 'app-component'}` to your `@component({})` and this
+  // will set the defaults fo all components
+  @if ($debug) {
+    border: $debug-size $debug-type $debug-color-app-component !important;
+  }
+}
+
+/**
+ * Fonts
+ **********************************************************************************************************************/
+body,
+div,
+input,
+p,
+textarea {
+  font-family: $app-font-body;
+  color: $app-color-text-dark;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $app-font-headers;
+  color: $app-color-text-dark;
+}
+
+/**********************************************************************************************************************/

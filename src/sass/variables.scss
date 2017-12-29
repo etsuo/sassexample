@@ -1,0 +1,30 @@
+$app-border-thick: 2px;
+$app-border-thin: 1px;
+
+$app-color-bg-dark: #E9EBEE;
+$app-color-bg-darkest: #000000;
+$app-color-bg-light: #FFFFFF;
+$app-color-highlight: #FEFC03;
+$app-color-inverse: #FFFFFF;
+$app-color-line-dark: darkgray;
+$app-color-line-light: lightgray;
+$app-color-text-dark: #464646;
+$app-color-text-darkest: #000000;
+$app-color-text-light: lightgray;
+$app-color-text-lightest: #FFFFFF;
+
+$app-font-body: 'Open Sans', sans-serif;
+$app-font-headers: 'Work Sans', sans-serif;
+
+$app-radius-standard: 5px;
+
+/**
+ * Debugging goodness
+ */
+$debug: false;
+$debug-size: 1px;
+$debug-type: solid;
+$debug-color-app-component: blue;
+$debug-color-app-form: orange;
+$debug-color-app-root: purple;
+$debug-color-div: red;
