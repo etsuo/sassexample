@@ -30,7 +30,7 @@ If you're not me and you're using this and you have a better way of doing things
 - `%app-defaults` is defined in `styles.scss`. See [SASS docs](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholder_selectors_foo) for an explanation of how placeholder selectors work.
 - `.app-component` extends `%app-defaults`. For this to work: add the following to your component classes:
     ```
-    @HostBinding('attr.class') defaultClass = 'app-component';
+    @HostBinding('class.app-component') isAppComponent = true;
     ```
 
 This complies better with: https://angular.io/guide/styleguide#style-06-03

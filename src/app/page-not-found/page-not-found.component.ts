@@ -6,7 +6,7 @@ import {Component, HostBinding, OnInit} from '@angular/core';
   styleUrls: ['./page-not-found.component.scss']
 })
 export class PageNotFoundComponent implements OnInit {
-  @HostBinding('attr.class') defaultClass = 'app-component';
+  @HostBinding('class.app-component') isAppComponent = true;
 
   constructor() {
   }

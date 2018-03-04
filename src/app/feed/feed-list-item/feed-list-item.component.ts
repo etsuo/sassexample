@@ -4,10 +4,11 @@ import {Referral} from '../../shared/models/referrals';
 @Component({
   selector: 'app-feed-list-item',
   templateUrl: './feed-list-item.component.html',
-  styleUrls: ['./feed-list-item.component.scss'],
+  styleUrls: ['./feed-list-item.component.scss']
 })
 export class FeedListItemComponent implements OnInit {
-  @HostBinding('attr.class') defaultClass = 'app-component';
+  @HostBinding('class.app-component') isAppComponent = true;
+
   @Input('item') item: Referral;
 
   constructor() {
