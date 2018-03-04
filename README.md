@@ -28,8 +28,12 @@ If you're not me and you're using this and you have a better way of doing things
 
 ## defaults
 - `%app-defaults` is defined in `styles.scss`. See [SASS docs](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholder_selectors_foo) for an explanation of how placeholder selectors work.
-- `.app-component` extends `%app-defaults`. For this to work, you need to make sure you add `host: {'class': 'app-component'}` to your `@Component` decorators.
-    - This will add the `app-component` class to your component, which will then pick up the app defaults. 
+- `.app-component` extends `%app-defaults`. For this to work: add the following to your component classes:
+    ```
+    @HostBinding('attr.class') defaultClass = 'app-component';
+    ```
+
+This complies better with: https://angular.io/guide/styleguide#style-06-03
 
 ## Debugging
 - In `src/sass/variables.scss` set `$debug` to true and outlines will appear to make it easier to debug your sass.

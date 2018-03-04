@@ -55,8 +55,8 @@ form {
 
 .app-component {
   @extend %app-defaults;
-  // add `host: {'class': 'app-component'}` to your `@component({})` and this
-  // will set the defaults fo all components
+  // add `@HostBinding('attr.class') defaultClass = 'app-component';` to your component classes so they get
+  // decorated with the `app-component` class.
   @if ($debug) {
     border: $debug-size $debug-type $debug-color-app-component !important;
   }
