@@ -1,0 +1,6 @@
+@import "~sass/styles";
+
+:host {
+  @extend %app-defaults;
+  // your s/css goes here
+}

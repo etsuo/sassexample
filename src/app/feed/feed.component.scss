@@ -1,6 +1,8 @@
-@import '~sass/libs';
+@import '~sass/styles';
 
 :host {
+  @extend %app-defaults;
+
   margin: 5px;
   padding: 5px;
 

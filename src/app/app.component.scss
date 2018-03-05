@@ -1,6 +1,8 @@
-@import '~sass/libs';
+@import '~sass/styles';
 
 :host {
+  @extend %app-defaults;
+
   .header {
     flex-direction: row;
 

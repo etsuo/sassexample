@@ -1,4 +1,4 @@
-import {Component, HostBinding, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Referral} from '../../shared/models/referrals';
 
 @Component({
@@ -7,7 +7,6 @@ import {Referral} from '../../shared/models/referrals';
   styleUrls: ['./feed-list-item.component.scss']
 })
 export class FeedListItemComponent implements OnInit {
-  @HostBinding('class.app-component') isAppComponent = true;
 
   @Input('item') item: Referral;
 

@@ -1,6 +1,8 @@
-@import '~sass/libs';
+@import '~sass/styles';
 
 :host {
+  @extend %app-defaults;
+
   flex-direction: row;
 
   &:not(:first-child) {

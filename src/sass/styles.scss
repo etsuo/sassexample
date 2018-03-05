@@ -28,6 +28,15 @@ input {
 /**
  * App Specific Defaults
  **********************************************************************************************************************/
+/*
+ * each of your components should setup like this:
+ * @import "~sass/styles";
+ *
+ * :host {
+ *   @extend %app-defaults;
+ *   // your s/css goes here
+ * }
+ */
 %app-defaults {
   background-color: $app-color-bg-dark;
   display: flex;
@@ -37,28 +46,21 @@ input {
     display: flex;
     flex-direction: column;
   }
-}
 
-app-root {
-  @extend %app-defaults;
-  @if ($debug) {
-    border: $debug-size $debug-type $debug-color-app-root !important;
-  }
-}
-
-form {
-  @extend %app-defaults;
-  @if ($debug) {
-    border: $debug-size $debug-type $debug-color-app-form !important;
-  }
-}
-
-.app-component {
-  @extend %app-defaults;
-  // add `@HostBinding('attr.class') defaultClass = 'app-component';` to your component classes so they get
-  // decorated with the `app-component` class.
   @if ($debug) {
     border: $debug-size $debug-type $debug-color-app-component !important;
+  }
+
+  app-root {
+    @if ($debug) {
+      border: $debug-size * 10 $debug-type $debug-color-app-root !important;
+    }
+  }
+
+  form {
+    @if ($debug) {
+      border: $debug-size $debug-type $debug-color-app-form !important;
+    }
   }
 }
 
