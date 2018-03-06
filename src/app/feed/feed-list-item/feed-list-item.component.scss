@@ -1,4 +1,4 @@
-@import '~sass/styles';
+@import '~sass/lib';
 
 :host {
   @extend %app-defaults;
@@ -10,7 +10,7 @@
   }
   padding: 5px;
 
-  background-color: $app-color-bg-light;
+  background-color: colorAccent();
   border-radius: $app-radius-standard;
 
   mat-card {
@@ -33,7 +33,7 @@
       }
 
       & [app-gray] {
-        color: $app-color-text-light;
+        color: colorForeground();
       }
     }
   }

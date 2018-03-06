@@ -1,19 +1,23 @@
-@import '~sass/styles';
+@import '~sass/lib';
 
 :host {
   @extend %app-defaults;
 
+  width: 100%;
+
   .header {
     flex-direction: row;
 
-    background-color: $app-color-highlight;
+    background-color: colorPrimary();
     padding: 10px;
 
     .logo {
       border-radius: 50px;
-      background-color: $app-color-text-darkest;
-      color: $app-color-text-lightest;
+      background-color: colorSecondary();
       padding: 10px;
+      a {
+        color: colorBackground();
+      }
     }
   }
 

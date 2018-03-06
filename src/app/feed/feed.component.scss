@@ -1,4 +1,4 @@
-@import '~sass/styles';
+@import '~sass/lib';
 
 :host {
   @extend %app-defaults;
@@ -8,7 +8,7 @@
 
   .add-new-referral {
     border-radius: $app-radius-standard;
-    background-color: $app-color-bg-light;
+    background-color: colorBackground();
     padding: 25px;
     padding-bottom: 10px;
 

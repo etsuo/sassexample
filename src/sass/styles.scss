@@ -1,67 +1,21 @@
-// https://github.com/necolas/normalize.css
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Work+Sans');
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import '~normalize.css/normalize.css';
-@import 'libs';
+@import 'lib';
 
 * {
   // Zero out differences in browsers
-
   margin: 0;
   padding: 0;
 }
 
 body {
-  background-color: $app-color-bg-dark;
-}
-
-div {
-  @if ($debug) {
-    border: $debug-size $debug-type $debug-color-div !important;
-  }
+  display: flex;
+  background-color: colorBackground();
 }
 
 input {
   padding: 10px;
-}
-
-/**
- * App Specific Defaults
- **********************************************************************************************************************/
-/*
- * each of your components should setup like this:
- * @import "~sass/styles";
- *
- * :host {
- *   @extend %app-defaults;
- *   // your s/css goes here
- * }
- */
-%app-defaults {
-  background-color: $app-color-bg-dark;
-  display: flex;
-  flex-direction: column;
-
-  div {
-    display: flex;
-    flex-direction: column;
-  }
-
-  @if ($debug) {
-    border: $debug-size $debug-type $debug-color-app-component !important;
-  }
-
-  app-root {
-    @if ($debug) {
-      border: $debug-size * 10 $debug-type $debug-color-app-root !important;
-    }
-  }
-
-  form {
-    @if ($debug) {
-      border: $debug-size $debug-type $debug-color-app-form !important;
-    }
-  }
 }
 
 /**
@@ -73,12 +27,12 @@ input,
 p,
 textarea {
   font-family: $app-font-body;
-  color: $app-color-text-dark;
+  color: colorForeground();
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $app-font-headers;
-  color: $app-color-text-dark;
+  color: colorForeground();
 }
 
 /**********************************************************************************************************************/
